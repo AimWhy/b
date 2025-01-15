@@ -1,4 +1,7 @@
 function FindProxyForURL(url, host) {
+    if (host.endsWith(".515551.xyz")) {
+        return "DIRECT";
+    }
 
     // 可以使用字符串处理
     if (!host.endsWith(".aimwhy.us.kg")) {
