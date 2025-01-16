@@ -57,7 +57,7 @@ function isPrivateIp(ip) {
 }
 
 function FindProxyForURL(url, host) {
-    var proxy = host.endsWith(workerDomain) ? `PROXY ${host.replaceAll('.', '__x__')}${workerDomain}` : direct;
+    var proxy = !host.endsWith(workerDomain) ? `PROXY ${host.replaceAll('.', '__x__')}${workerDomain}` : direct;
 
     if (isInDirectDomain(host)) {
         debug('命中直连域名', host, 'N/A');
