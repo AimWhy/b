@@ -109,13 +109,13 @@ function isLocalTestDomain(domain) {
     });
 }
 
-function direct(hostName, ip) {
+function direct(host, ip) {
     return 'DIRECT';
 }
 
-var proxy = function (hostName, ip) {
-    var realTarget = hostName || ip;
-    return `PROXY ${realTarget.replaceAll('.', '__x__').replace(':', '__y__')}.${serverDomain}`;
+var proxy = function (host, ip) {
+    var tmp = host || ip;
+    return `PROXY ${tmp.replaceAll('.', '__x__').replace(':', '__y__')}.${serverDomain}`;
 };
 
 function FindProxyForURL(url, host) {
@@ -127,7 +127,7 @@ function FindProxyForURL(url, host) {
         return direct(host);
     }
 
-    // 假设 host 是 IP 地址 
+    // 假设 host 是 IP 地址
     var ip = host;
     if (isIpV4(host)) {
         return ipv4_check(ip) ? direct('', ip) : proxy('', ip);
