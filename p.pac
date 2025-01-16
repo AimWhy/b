@@ -129,11 +129,11 @@ function FindProxyForURL(url, host) {
 
     // 假设 host 是 IP 地址
     var ip = host;
-    if (isIpV4(host)) {
+    if (isIpV4(ip)) {
         return ipv4_check(ip) ? direct('', ip) : proxy('', ip);
     }
 
-    if (isIpV6(host)) {
+    if (isIpV6(ip)) {
         return ipv6_check(ip) ? direct('', ip) : proxy('', ip);
     }
 
