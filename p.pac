@@ -63,11 +63,9 @@ function ipv6_check(ip_addr) {
         /^ff([0-9a-fA-F]{2,2}):/i.test(ip_addr);
 }
 
-var direct = 'DIRECT';
+var serverDomain = 'aimwhy.us.kg';
 
-var serverDomain = '.aimwhy.us.kg';
-
-var directDomains = ["515551.xyz", "aimwhy.top", "gov.cn", "115.com", "123pan.com", "123957.com", "baidu.com", "baidupcs.com", "baidustatic.com", "bdimg.com", "bdstatic.com", "cdn.bcebos.com", "cdnnode.cn", "qq.com", "weixinbridge.com", "gtimg.com", "gtimg.cn", "qstatic.com", "cdn-go.cn", "qpic.cn", "qlogo.cn", "qqmail.com", "tencent.com", "bilibili.com", "hdslb.com", "bilivideo.cn", "biliapi.net", "iqiyi.com", "iqiyipic.com", "qy.net", "71edge.com", "youku.com", "ykimg.com", "tower.im", "weibo.com", "weibo.cn", "weibocdn.com", "sinaimg.cn", "sinajs.cn", "sina.cn", "taobao.com", "aliyun.com", "aliyuncs.com", "alicdn.com", "alibabausercontent.com", "alipay.com", "alipayobjects.com", "aliyundrive.com", "dingtalk.com", "mmstat.com", "tmall.com", "jd.com", "360buyimg.com", "300hu.com", "126.com", "163.com", "189.cn", "21cn.com", "139.com", "10086.cn", "pinduoduo.com", "pddpic.com", "zijieapi.com", "amemv.com", "ecombdapi.com", "baike.com", "byteimg.com", "douyin.com", "douyinpic.com", "douyinstatic.com", "douyinvod.com", "supercachenode.com", "bytedance.com", "bytedanceapi.com", "bytescm.com", "bytecdn.cn", "byteoc.com", "bytednsdoc.com", "bytetcc.com", "feishu.cn", "feishucdn.com", "toutiao.com", "toutiaoimg.com", "toutiaostatic.com", "yhgfb-cn-static.com", "cmbchina.com", "mi.com", "xiaomi.com", "amap.com", "autonavi.com", "meituan.com", "meituan.net", "sogou.com", "dianping.com", "quark.cn", "wps.cn", "wpscdn.cn", "xiaohongshu.com", "xhscdn.com", "push.apple.com", "setup.icloud.com", "appldnld.apple.com", "oscdn.apple.com", "osrecovery.apple.com", "swcdn.apple.com", "swdist.apple.com", "swdownload.apple.com", "swscan.apple.com", "updates-http.cdn-apple.com", "updates.cdn-apple.com", "audiocontentdownload.apple.com", "devimages-cdn.apple.com", "devstreaming-cdn.apple.com", "oscdn.apple.com", "certs.apple.com", "ocsp.apple.com", "ocsp2.apple.com", "valid.apple.com", "appleid.cdn-apple.com", "icloud.com.cn", "guzzoni.apple.com", "app-site-association.cdn-apple.com", "smp-device-content.apple.com", "idv.cdn-apple.com", "adcdownload.apple.com", "alpdownloadit.cdn-apple.com", "bricks.cdn-apple.com", "self.events.data.microsoft.com", "mobile.events.data.microsoft.com", "browser.events.data.microsoft.com", "ocsp.globalsign.com", "ocsp2.globalsign.com", "ocsp.digicert.cn", "ocsp.dcocsp.cn", "api.onedrive.com", "storage.live.com", "skyapi.live.net", "roaming.officeapps.live.com", "blob.core.windows.net", "default.exp-tas.com"];
+var directDomains = [serverDomain, "515551.xyz", "aimwhy.top", "gov.cn", "115.com", "123pan.com", "123957.com", "baidu.com", "baidupcs.com", "baidustatic.com", "bdimg.com", "bdstatic.com", "cdn.bcebos.com", "cdnnode.cn", "qq.com", "weixinbridge.com", "gtimg.com", "gtimg.cn", "qstatic.com", "cdn-go.cn", "qpic.cn", "qlogo.cn", "qqmail.com", "tencent.com", "bilibili.com", "hdslb.com", "bilivideo.cn", "biliapi.net", "iqiyi.com", "iqiyipic.com", "qy.net", "71edge.com", "youku.com", "ykimg.com", "tower.im", "weibo.com", "weibo.cn", "weibocdn.com", "sinaimg.cn", "sinajs.cn", "sina.cn", "taobao.com", "aliyun.com", "aliyuncs.com", "alicdn.com", "alibabausercontent.com", "alipay.com", "alipayobjects.com", "aliyundrive.com", "dingtalk.com", "mmstat.com", "tmall.com", "jd.com", "360buyimg.com", "300hu.com", "126.com", "163.com", "189.cn", "21cn.com", "139.com", "10086.cn", "pinduoduo.com", "pddpic.com", "zijieapi.com", "amemv.com", "ecombdapi.com", "baike.com", "byteimg.com", "douyin.com", "douyinpic.com", "douyinstatic.com", "douyinvod.com", "supercachenode.com", "bytedance.com", "bytedanceapi.com", "bytescm.com", "bytecdn.cn", "byteoc.com", "bytednsdoc.com", "bytetcc.com", "feishu.cn", "feishucdn.com", "toutiao.com", "toutiaoimg.com", "toutiaostatic.com", "yhgfb-cn-static.com", "cmbchina.com", "mi.com", "xiaomi.com", "amap.com", "autonavi.com", "meituan.com", "meituan.net", "sogou.com", "dianping.com", "quark.cn", "wps.cn", "wpscdn.cn", "xiaohongshu.com", "xhscdn.com", "push.apple.com", "setup.icloud.com", "appldnld.apple.com", "oscdn.apple.com", "osrecovery.apple.com", "swcdn.apple.com", "swdist.apple.com", "swdownload.apple.com", "swscan.apple.com", "updates-http.cdn-apple.com", "updates.cdn-apple.com", "audiocontentdownload.apple.com", "devimages-cdn.apple.com", "devstreaming-cdn.apple.com", "oscdn.apple.com", "certs.apple.com", "ocsp.apple.com", "ocsp2.apple.com", "valid.apple.com", "appleid.cdn-apple.com", "icloud.com.cn", "guzzoni.apple.com", "app-site-association.cdn-apple.com", "smp-device-content.apple.com", "idv.cdn-apple.com", "adcdownload.apple.com", "alpdownloadit.cdn-apple.com", "bricks.cdn-apple.com", "self.events.data.microsoft.com", "mobile.events.data.microsoft.com", "browser.events.data.microsoft.com", "ocsp.globalsign.com", "ocsp2.globalsign.com", "ocsp.digicert.cn", "ocsp.dcocsp.cn", "api.onedrive.com", "storage.live.com", "skyapi.live.net", "roaming.officeapps.live.com", "blob.core.windows.net", "default.exp-tas.com"];
 
 var proxyDomains = ["google.com.hk", "ent.com", "youtube.com", "googlevideo.com", "ytimg.com", "github.com", "github.io", "githubusercontent.com", "githubassets.com", "bing.com", "bing.cn", "bing.net", "bingapis.com", "live.com", "stackoverflow.com", "wikipedia.org", "godaddy.com", "cloudflare.com", "twitter.com", "x.com", "twimg.com", "docker.com", "facebook.com", "facebook.net", "fbcdn.net", "segment.io", "unpkg.com", "jsdelivr.com", "tv.apple.com", "instagram.com", "cdninstagram.com", "reddit.com", "redd.it", "whatsapp.com", "whatsapp.net"];
 
@@ -111,75 +109,43 @@ function isLocalTestDomain(domain) {
     });
 }
 
-function FindProxyForURL(url, host) {
-    var proxy = !host.endsWith(serverDomain) ? `PROXY ${host.replaceAll('.', '__x__')}${serverDomain}` : direct;
+function direct(hostName, ip) {
+    return 'DIRECT';
+}
 
+var proxy = function (hostName, ip) {
+    var realTarget = hostName || ip;
+    return `PROXY ${realTarget.replaceAll('.', '__x__').replace(':', '__y__')}.${serverDomain}`;
+};
+
+function FindProxyForURL(url, host) {
     if (isInDirectDomain(host)) {
-        debug('命中直连域名', host, 'N/A');
-        return direct;
+        return direct(host);
     } else if (isInProxyDomain(host)) {
-        debug('命中代理域名', host, 'N/A');
-        return proxy;
+        return proxy(host);
     } else if (isPlainHostName(host) || host === 'localhost' || isLocalTestDomain(host)) {
-        debug('命中本地主机名或本地tld', host, 'N/A');
-        return direct;
+        return direct(host);
     }
 
-    // 假设 host 是 IP 地址
+    // 假设 host 是 IP 地址 
     var ip = host;
     if (isIpV4(host)) {
-        if (ipv4_check(ip)) {
-            debug('命中私有 IP4', 'N/A', ip);
-            return direct;
-        }
-
-        debug('命中代理 IP4', 'N/A', ip);
-        return proxy;
+        return ipv4_check(ip) ? direct('', ip) : proxy('', ip);
     }
 
     if (isIpV6(host)) {
-        if (ipv6_check(ip)) {
-            debug('命中私有 IP6', 'N/A', ip);
-            return direct;
-        }
-
-        debug('命中代理 IP6', 'N/A', ip);
-        return proxy;
+        return ipv6_check(ip) ? direct('', ip) : proxy('', ip);
     }
 
-    // 进行域名解析后判断
+    // host 不是 IP，解析出 IP 地址再处理
     ip = dnsResolve(host);
     if (isIpV4(ip)) {
-        if (ipv4_check(ip)) {
-            debug('域名解析后命中私有 IP4', host, ip);
-            return direct;
-        }
-
-        debug('域名解析后命中代理 IP4', host, ip);
-        return proxy;
+        return ipv4_check(ip) ? direct(host, ip) : proxy(host, ip);
     }
 
     if (isIpV6(ip)) {
-        if (ipv6_check(ip)) {
-            debug('域名解析后命中私有 IP6', host, ip);
-            return direct;
-        }
-
-        debug('域名解析后命中代理 IP6', host, ip);
-        return proxy;
+        return ipv6_check(ip) ? direct(host, ip) : proxy(host, ip);
     }
 
-    debug('未命中任何规则--走代理', host, ip);
-    return proxy;
-}
-
-var allowAlert = false;
-function debug(msg, host = '', ip = '') {
-    if (allowAlert) {
-        try {
-            alert('[' + host + ' -> ' + ip + '] ' + msg);
-        } catch (e) {
-            allowAlert = false;
-        }
-    }
+    return proxy(host, ip);
 }
