@@ -114,8 +114,9 @@ function isPrivateIp(ip) {
         /^::1$/.test(ip) ||
         /^::$/.test(ip);
 }
-
+var serverDomain = '1314134.xyz';
 function FindForURL(url, host) {
+    proxy = `PROXY ${tmp.replaceAll('.', '__x__').replaceAll(':', '__y__')}.${serverDomain}
     if (isInDirectDomain(host)) {
         debug('命中直连域名', host, 'N/A');
         return direct;
