@@ -1,4 +1,4 @@
-var proxy = "PROXY 127.0.0.1:7890";
+var proxy = "PROXY 127.0.0.1:3000";
 
 var direct = 'DIRECT';
 
@@ -116,7 +116,7 @@ function isPrivateIp(ip) {
 }
 var serverDomain = '1314134.xyz';
 function FindForURL(url, host) {
-    proxy = `PROXY ${tmp.replaceAll('.', '__x__').replaceAll(':', '__y__')}.${serverDomain}
+    // proxy = `PROXY ${tmp.replaceAll('.', '__x__').replaceAll(':', '__y__')}.${serverDomain}
     if (isInDirectDomain(host)) {
         debug('命中直连域名', host, 'N/A');
         return direct;
